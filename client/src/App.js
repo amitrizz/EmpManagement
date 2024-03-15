@@ -1,6 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "./components/loginSignup/Login";
-import Signup from "./components/loginSignup/Signup";
 import UserProfile from "./components/DashBoard/UserProfile";
 import GetAllEmployee from "./components/DashBoard/GetAllEmployee";
 import AddEmployee from "./components/DashBoard/AddEmployee";

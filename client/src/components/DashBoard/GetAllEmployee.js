@@ -21,7 +21,7 @@ function GetAllEmployee() {
 
       // Send the request with the configured headers
 
-      const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/api/Employee/search-employee`, { fullname: searchemployee }, { headers: headers });
+      const response = await axios.post(`/api/Employee/search-employee`, { fullname: searchemployee }, { headers: headers });
 
       // console.log(response.data.searchResult);
       setAllemployee(response.data.searchResult)
@@ -41,7 +41,7 @@ function GetAllEmployee() {
         };
 
         // Send the request with the configured headers
-        const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/Employee/getAll-employee`, { headers: headers });
+        const response = await axios.get(`/api/Employee/getAll-employee`, { headers: headers });
 
         // console.log(response.data.employees);
         setAllemployee(response.data.employees)

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-// import LoginSignup from '../loginSignup/Signup';
 import logo from '../images/img1.png';
 import axios from "axios"
 import Navbar from '../Navbar';
