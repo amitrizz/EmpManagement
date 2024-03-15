@@ -1,7 +1,7 @@
 import fs from "fs";
 import uniqid from "uniqid";
 
-const readEmployees = async () => {
+export const readEmployees = async () => {
     try {
         const dataBuffer = fs.readFileSync("./employees.json", "utf-8");
         return JSON.parse(dataBuffer);
