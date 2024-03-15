@@ -24,7 +24,7 @@ function UserProfile() {
                 };
 
                 // Send the request with the configured headers
-                const res2 = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/Employee/avg-employee-salary`, { headers: headers });
+                const res2 = await axios.get(`/api/Employee/avg-employee-salary`, { headers: headers });
 
                 // console.log(res2);
                 setAvgSalary(res2.data.avgEmpSalary)
@@ -52,7 +52,7 @@ function UserProfile() {
             };
             // Send the request with the configured headers
             console.log(department);
-            const res = await axios.post(`${process.env.REACT_APP_BASE_URL}/api/Employee/avg-department-salary`, { department:department }, { headers: headers });
+            const res = await axios.post(`/api/Employee/avg-department-salary`, { department:department }, { headers: headers });
 
             console.log(res);
             setAvgDepartmentSalary(res.data.avgDeptSalary)

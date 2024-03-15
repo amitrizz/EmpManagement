@@ -30,7 +30,7 @@ function AddEmployee() {
         alert("Enter All Fields");
       }else{
         // console.log();
-        const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/api/Employee/add-employee`, { fullname, age, dob, salary, department }, { headers: headers }); 
+        const response = await axios.post(`/api/Employee/add-employee`, { fullname, age, dob, salary, department }, { headers: headers }); 
         console.log(response);
         if (response.status == 200) {
   

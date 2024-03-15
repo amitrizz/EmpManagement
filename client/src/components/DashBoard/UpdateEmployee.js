@@ -40,7 +40,7 @@ function UpdateEmployee() {
                 alert("Enter All Fields");
             } else {
                 // console.log();
-                const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/api/Employee/update-employee`, { fullname, age, dob, salary, department, id }, { headers: headers });
+                const response = await axios.post(`/api/Employee/update-employee`, { fullname, age, dob, salary, department, id }, { headers: headers });
                 console.log(response);
                 if (response.status == 200) {
                     alert(`Submit Successfully`)

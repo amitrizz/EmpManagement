@@ -67,7 +67,7 @@ function GetAllEmployee() {
 
       // Send the request with the configured headers
       console.log(id);
-      const response = await axios.delete(`${process.env.REACT_APP_BASE_URL}/api/Employee/delete-employee/${id}`, { headers: headers });
+      const response = await axios.delete(`/api/Employee/delete-employee/${id}`, { headers: headers });
 
       // console.log(response);
       alert("Employee Data Deleted Successfully")
@@ -92,7 +92,7 @@ function GetAllEmployee() {
       };
       // Send the request with the configured headers
       // console.log(sortOnCol);
-      const res = await axios.post(`${process.env.REACT_APP_BASE_URL}/api/Employee/sort-data`, { type: sortOnCol }, { headers: headers });
+      const res = await axios.post(`/api/Employee/sort-data`, { type: sortOnCol }, { headers: headers });
 
       // console.log(res);
       setAllemployee(res.data.employees);
@@ -117,7 +117,7 @@ function GetAllEmployee() {
       };
       // Send the request with the configured headers
       // console.log(selectGroup);
-      const res = await axios.post(`${process.env.REACT_APP_BASE_URL}/api/Employee/group-department`, { department: selectGroup }, { headers: headers });
+      const res = await axios.post(`/api/Employee/group-department`, { department: selectGroup }, { headers: headers });
 
       // console.log(res);
       setAllemployee(res.data.sortedGroupDept);
