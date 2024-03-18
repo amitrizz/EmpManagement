@@ -26,7 +26,7 @@ function UserProfile() {
                 const res2 = await axios.get(`/api/Employee/avg-employee-salary`, { headers: headers });
 
                 // console.log(res2);
-                setAvgSalary(res2.data.avgEmpSalary)
+                setAvgSalary(Math.floor(res2.data.avgEmpSalary))
                 setNoOfEmployee(res2.data.noOfEmployee)
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -54,7 +54,7 @@ function UserProfile() {
             const res = await axios.post(`/api/Employee/avg-department-salary`, { department:department }, { headers: headers });
 
             console.log(res);
-            setAvgDepartmentSalary(res.data.avgDeptSalary)
+            setAvgDepartmentSalary(Math.floor(res.data.avgDeptSalary))
 
             // setName(response.data.user.name);
             // setEmail(response.data.user.email)

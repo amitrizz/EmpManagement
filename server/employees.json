@@ -38,5 +38,37 @@
     "dob": "2004-07-10",
     "salary": 15000,
     "department": "Sales"
+  },
+  {
+    "id": "wmnnods8ltwbs80z",
+    "fullname": "sumit",
+    "age": 20,
+    "dob": "2004-08-28",
+    "salary": 2500,
+    "department": "Production"
+  },
+  {
+    "id": "wmnnocv0ltwcav46",
+    "fullname": "rajat",
+    "age": 20,
+    "dob": "2003-09-13",
+    "salary": 15000,
+    "department": "Production"
+  },
+  {
+    "id": "wmnno71oltwcdmkx",
+    "fullname": "rishi",
+    "age": 21,
+    "dob": "2002-05-11",
+    "salary": 15200,
+    "department": "Production"
+  },
+  {
+    "id": "wmnno9uoltwces76",
+    "fullname": "krish",
+    "age": 20,
+    "dob": "2003-08-02",
+    "salary": 14000,
+    "department": "Field"
   }
 ]

@@ -13,7 +13,6 @@ function UpdateEmployee() {
 
     const token = localStorage.getItem('token');
     const [fullname, setName] = useState("");
-    const [age, setAge] = useState("");
     const [dob, setDOB] = useState("");
     const [salary, setSalary] = useState("");
     const [department, setDepartment] = useState("");
@@ -36,10 +35,17 @@ function UpdateEmployee() {
                 // Add any other headers you need
             };
 
-            if (!fullname || !age || !dob || !salary || !department) {
+            if (!fullname || !dob || !salary || !department) {
                 alert("Enter All Fields");
             } else {
                 // console.log();
+                const date_of_birth = new Date(dob);
+                const currentDate = new Date();
+                let age = currentDate.getFullYear() - date_of_birth.getFullYear();
+                if (currentDate.getMonth() < date_of_birth.getMonth() ||
+                    (currentDate.getMonth() === date_of_birth.getMonth() && currentDate.getDate() < date_of_birth.getDate())) {
+                    age--;
+                }
                 const response = await axios.post(`/api/Employee/update-employee`, { fullname, age, dob, salary, department, id }, { headers: headers });
                 console.log(response);
                 if (response.status == 200) {
@@ -75,10 +81,10 @@ function UpdateEmployee() {
                             <label for="exampleInputEmail1" class="form-label">Employee Name</label>
                             <input maxLength={30} type="text" class="form-control" onChange={e => setName(e.target.value)} />
                         </div>
-                        <div class="mb-3">
+                        {/* <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Age</label>
                             <input maxLength={30} type="number" class="form-control" onChange={e => setAge(e.target.value)} />
-                        </div>
+                        </div> */}
 
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Date of Birth</label>
